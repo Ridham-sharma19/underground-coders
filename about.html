@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underground Coders with Circle Cursor Trail</title>
+    <link rel="stylesheet" href="about.css">
+    <style>
+        .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none; 
+        }
+
+        body {
+            margin: 0;
+            overflow: hidden; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <div class="box">
+        <input type="checkbox" name="readmore" id="readmore">
+        <div class="content">
+            <div class="logo-container">
+                <img src="data:image/png;base64,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" alt="Logo" class="logo">
+            </div>
+            <h1>UNDERGROUND CODERS</h1>
+            <div class="des">
+                <p class="intro">
+                    Right now we are students who are struggling to find our path. We are like normal teenagers but what makes us different is the passion for learning. By learning, we don't mean learning for exams, we mean learning new skills. We are passionate about learning new things. During that, we do a lot of research and we are willing to share it with you. We are creating this website to share our knowledge and connect with people around the world.
+                </p>
+            </div>
+            <div class="button">
+                <label for="readmore" data-more="SHOW ABOUT" data-less="HIDE"></label>
+            </div>
+        </div>
+    </div>
+
+    <script src="about.js"></script>
+</body>
+</html>
