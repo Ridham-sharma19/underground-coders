@@ -8,31 +8,97 @@
 </head>
 <body>
     <div class="loader">
-        <h1>WELCOME </h1>
-        <H1>TO</H1>
-        <H1>DOUBT SOLVER
-            
-        </H1>
+        <h1><SPAN>WELCOME</SPAN></h1>
+        <H1><SPAN>TO</SPAN></H1>
+        <H1> <span>DOUBT SOLVER</span></H1>
     </div>
+
+    
     <div class="main">
         <div class="navbar">
             <div class="navlogo">
                 <img src="logo.png" alt=""></div> <H2 class="logo-heading">DOUBT SOLVER</H2> 
-            <div class="nav-search">
-                <input class="placeholder" placeholder="search faculty....">
-                <div class="search">
-                    <svg width="2em" height="2em" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14"/>
-                    </svg>
+            <div class="button-box">
+                <button class="nav-button"><a href="#">HOME</a></button>
+                <button class="nav-button"><a href="#">SIGN UP</a></button>
+                <button class="nav-button"><a href="#">HELP</a></button>
+                <button class="nav-button"><a href="about.html">ABOUT US</a></button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="booking-container">
+                <h1>Book a Session with  Professor</h1>
+        
+                <div class="image-form-container">
+                    <div class="image-holder">
+                        <img id="professorImage" src="https://via.placeholder.com/350" alt="Professor Image">
+                    </div>
+        
+                    <form action="#" method="post" class="booking-form">
+                        <div class="form-group">
+                            <label for="professor">Select Professor:</label>
+                            <select id="professor" name="professor" onchange="changeImageAndDetails()">
+                                <option value="dr_Damanpreet_Singh" data-img="http://sliet.ac.in/wp-content/uploads/avatars/4/65783e7db0473-bpfull.jpg" data-qualification="Ph.D., M.Tech, B.Tech." data-email="damanpreets@sliet.ac.in" data-phone="+91-1672-253210">Dr. Damanpreet Singh</option>
+                                <option value="dr_Birmohan_Singh" data-img="http://sliet.ac.in/wp-content/uploads/avatars/5/6fc17d6735998f4f22a0e91fbf43b75c-bpfull.jpg" data-qualification="Ph.D., M.E." data-email="birmohansingh@sliet.ac.in" data-phone="+91-1672-253208">Dr. Birmohan Singh</option>
+                                <option value="dr_Major_Singh" data-img="http://sliet.ac.in/wp-content/uploads/avatars/35/5e69c6be20c7e-bpfull.jpg" data-qualification="Ph.D., M.Tech., B.Tech." data-email="mjrsingh@yahoo.com" data-phone="01672-253212">Dr. Major Singh Goraya</option>
+                                <option value="dr_Manoj_Sachan" data-img="http://sliet.ac.in/wp-content/uploads/avatars/6/605c66bd3e3bc-bpfull.jpg" data-qualification="B.Tech (Computer Science), M.E (Computer Science), Ph.D (Computer Science & Engineering)" data-email="manojsachan@sliet.ac.in, manojsachan@gmail.com" data-phone="+91-1672-253214">Dr. Manoj Sachan</option>
+                                <option value="Gurjinder_Kaur" data-img="http://sliet.ac.in/wp-content/uploads/avatars/14/5f2245e7a7f1bde5dee5bda48e09d411-bpfull.jpg" data-qualification="B.E. Kyrgyz Technical University, Bishkek M.S. BITS, Pilani Ph.D SLIET, Longowal" data-email="gurjinder13@yahoo.com" data-phone="+91-1672-253326">Dr. Gurjinder Kaur</option>
+                                <option value="dr_Amar_Nath" data-img="http://sliet.ac.in/wp-content/uploads/avatars/467/66b8bb350cc46-bpfull.jpg" data-qualification="Ph.D. in CSE from IIT Roorkee, Sept. 2020. Thesis 'A Distributed Approach for Collaborative Task Execution in Dynamic Environment'. M. Tech. in CSE from NIT Rourkela, June 2014. B. Tech. in CSE from BIET Jhansi, June 2006." data-email="amarnath@sliet.ac.in" data-phone="01672-253610">Dr. Amar Nath</option>
+                                <option value="dr_Jagdeep_Singh" data-img="http://sliet.ac.in/wp-content/uploads/avatars/466/66f81ca30f4ff-bpfull.jpg" data-qualification="Ph.D. entitled 'Proficient Route Selection Strategies for Effective Routing in Delay-Tolerant Opportunistic Networks' from the University of Delhi, New Delhi. M. Tech, Computer Science & Engineering. B. Tech, Computer Science & Engineering" data-email="jagdeep@sliet.ac.in; jagdeepknit@gmail.com" data-phone="01672-253320">Dr. Jagdeep Singh</option>
+                                <option value="dr_Manminder_Singh" data-img="http://sliet.ac.in/wp-content/uploads/avatars/16/66693282b6269-bpfull.jpg" data-qualification="B.Tech (Computer Science & Engineering), M.Tech (Computer Science & Engineering), Ph.D (Computer Science & Engineering)" data-email="manminderldh@gmail.com, manmindersingh@sliet.ac.in" data-phone="+91-01672-253328">Dr. Manminder Singh</option>
+                                <option value="dr_Preetpal_Kaur_Buttar" data-img="http://sliet.ac.in/wp-content/uploads/avatars/349/632d98c75d80f-bpfull.jpg" data-qualification="PhD (Computer Science & Engineering)" data-email="preetpal@sliet.ac.in" data-phone="01672-253614">Dr. Preetpal Kaur Buttar</option>
+                                <option value="dr_Tajinder_Singh" data-img="http://sliet.ac.in/wp-content/uploads/avatars/468/64e3532d30fac-bpfull.jpg" data-qualification="Ph.D. entitled 'Machine Learning Based Text Mining in Social Media' from National Institute of Technology, Hamirpur, India." data-email="tajindersingh@sliet.ac.in" data-phone="91-6283963279">Dr. Tajinder Singh</option>
+                                <option value="dr_Utkarsh" data-img="http://sliet.ac.in/wp-content/uploads/avatars/493/6165aace595a1-bpfull.jpg" data-qualification="Doctor of Philosophy, School of Computer & Systems Sciences, Jawaharlal Nehru University, New Delhi, India. Master of Technology (Computer Science and Technology), School of Computer & Systems Sciences, Jawaharlal Nehru University, New Delhi, India. Bachelor of Technology (Information Technology), University Institute of Engineering & Technology, CSJM University, Kanpur, India" data-email="No Details" data-phone="No Details">Dr. Utkarsh</option>
+                                <option value="dr_Vinod_Kumar_Verma" data-img="http://sliet.ac.in/wp-content/uploads/avatars/17/28b95ba0ed455dca378c1ada58307bf6-bpfull.jpg" data-qualification="Ph.D. Computer Science and Engineering" data-email="vinod5881@gmail.com" data-phone="01672-253218">Dr. Vinod Kumar Verma</option>
+                                <option value="Jaspal_Singh" data-img="http://sliet.ac.in/wp-content/uploads/avatars/36/e0a878e8162fd75cb5eb6929d98df5c1-bpfull.jpg" data-qualification="M.E. (CSE & IT), Pursuing PhD. in Cloud Computing" data-email="safrisoft@yahoo.com, jaspalsingh@sliet.ac.in" data-phone="01672-253327">Jaspal Singh</option>
+                                <option value="Rahul_Gautam" data-img="http://sliet.ac.in/wp-content/uploads/avatars/350/666bf221c60a0-bpfull.jpg" data-qualification="Ph.D. pursuing, M.Tech (Computer Science and Applications) from Thapar University, Patiala. B.Tech(Computer Science and Info. Technology) from Sir Chhotu Ram Inst. of Engg. & Technology, CCS University Campus, Meerut." data-email="rahulgautam@sliet.ac.in" data-phone="+91-1672-25 3612">Rahul Gautam</option>
+                                <option value="dr_Jatinder_Pal_Singh" data-img="http://sliet.ac.in/wp-content/uploads/avatars/344/64edd5a68d11b-bpfull.jpg" data-qualification="B.Tech - Computer Science and Engineering, M.Tech - Computer Science and Engineering, Ph.D. - Computer Science and Engineering" data-email="sachdeva.jp@gmail.com, jatinderpalsingh@sliet.ac.in" data-phone="No Details">Dr. Jatinder Pal Singh</option>
+                                <option value="dr_Sukhpreet_Singh" data-img="http://sliet.ac.in/wp-content/uploads/avatars/353/60544f9339252-bpfull.jpg" data-qualification="B.Tech, M.Tech, Ph.D (Pursuing)" data-email="sukhpreet.manshahia@gmail.com" data-phone="No Details">Dr. Sukhpreet Singh</option>
+                                <option value="Abhishek" data-img="http://www.gravatar.com/avatar/fdb548e83ebf4f267bd6f3018d475add?s=100&r=g&d=mm" data-qualification="No Details" data-email="No Details" data-phone="No Details">Abhishek</option>
+                                <option value="Chinu" data-img="http://sliet.ac.in/wp-content/uploads/avatars/477/605067c46b9c6-bpfull.jpg" data-qualification="Ph.D.(Pursuing), M.Tech, B.Tech" data-email="chinu@sliet.ac.in" data-phone="9915025805">Chinu</option>
+                                <option value="dr_Vikas_Kumar_Garg" data-img="http://sliet.ac.in/wp-content/uploads/avatars/457/605b0275612df-bpfull.jpg" data-qualification="B.Tech(IT), M.Tech(Computer Science & Engineering), Ph.D (Big Data, Hadoop, MongoDB) (Computer Science & Engineering)" data-email="contactvikashgarg@gmail.com" data-phone="9988610629">Dr. Vikas Kumar Garg</option>
+                                <option value="Harpreet_Singh" data-img="http://www.gravatar.com/avatar/6f05b70f110917eb0889a844d9c02124?s=100&r=g&d=mm" data-qualification="No Details" data-email="No Details" data-phone="No Details">Harpreet Singh</option>
+                                <option value="Sakshi_Bansal" data-img="http://www.gravatar.com/avatar/05e256abf6960816d31faa30c0c15835?s=100&r=g&d=mm" data-qualification="No Details" data-email="No Details" data-phone="No Details">Sakshi Bansal</option>
+                                <option value="Sunita_Rani" data-img="http://sliet.ac.in/wp-content/uploads/avatars/516/64ed97380a462-bpfull.jpg" data-qualification="Ph.D(Pursuing),M.Tech,B.Tech" data-email="sunitarani@sliet.ac.in" data-phone="8196013222">Sunita Rani</option>
+                               
+                               
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Select Date:</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="time-slot">Select Time Slot:</label>
+                            <select id="time-slot" name="time-slot" required>
+                                <option value="" disabled selected>Select a time slot</option>
+                                <option value="09:00-10:00">09:00 AM to 10:00 AM</option>
+                                <option value="10:00-11:00">10:00 AM to 11:00 AM</option>
+                                <option value="11:00-12:00">11:00 AM to 12:00 PM</option>
+                                <option value="12:00-13:00">12:00 PM to 01:00 PM</option>
+                                <option value="13:00-14:00">01:00 PM to 02:00 PM</option>
+                                <option value="14:00-15:00">02:00 PM to 03:00 PM</option>
+                                <option value="15:00-16:00">03:00 PM to 04:00 PM</option>
+                                <option value="16:00-17:00">04:00 PM to 05:00 PM</option>
+                            </select>
+                        </div>
+        
+                        <div class="professor-details">
+                            <h2>Professor Details</h2>
+                            <p id="qualification"><strong>Qualification:</strong> </p>
+                            <p id="email"><strong>Email:</strong> </p>
+                            <p id="phone"><strong>Phone:</strong> </p>
+                        </div>
+        
+                        <button type="submit" class="book-button">Book Now</button>
+                    </form>
                 </div>
             </div>
-          
-            <div class="button-box">
-                <button><a href="#">HOME</a></button>
-                <button><a href="#">SIGN IN</a></button>
-                <button><a href="#">HELP</a></button>
-                <button><a href="#">ABOUT US</a></button>
-            </div>
+        
+            
+        
         </div>
     </div>
 
