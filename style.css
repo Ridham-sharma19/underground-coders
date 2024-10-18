@@ -130,7 +130,13 @@ body, html {
     justify-content: space-around; /* Center items horizontally */
     align-items: center; /* Center items vertically */
 }
-
+.logo-heading{position:relative;
+    top:0.5vw;
+    left:-1.4vw;
+    color:#056fcc;
+    font-size: 1.3vw;
+   
+}
 /* Button styles */
 .button-box button {
     text-align: center; /* Center text horizontally */
@@ -138,10 +144,10 @@ body, html {
     border: 1px solid rgb(4, 129, 224);
     outline: none;
     padding: 10px; /* Adjusted padding for better centering */
-    height: 4vw; /* Maintain responsive height */
+    height: 3vw; /* Maintain responsive height */
     font-weight: 700;
-    width: 5vw; /* Maintain responsive width */
-    border-radius: 15px;
+    width: 5.2vw; /* Maintain responsive width */
+    border-radius: 25px;
     overflow: hidden;
     transform: scaleX(1);
     transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1);
