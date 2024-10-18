@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Fixed typo */
+    overflow: hidden; /* Prevent overflow */
+}
+
+body, html {
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+     background-color: rgba(0, 0, 0, 0.409); 
+}
+
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    height: 8vw; /* Relative to viewport */
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(15.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.7vw;
+}
+
+/* Logo styles */
+.navlogo {
+    width: 7.5vw; /* Responsive */
+    height: 7.5vw; /* Responsive */
+}
+
+.navlogo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* Search Container Styles */
+.nav-search {
+    width: 40vw; /* Adjusted from 620px to 40vw */
+    display: flex;
+    justify-content: space-evenly;
+    border: none; /* No border by default */
+    height: 3vw; /* Adjusted from 40px to 3vw */
+    border-radius: 1vw; /* Adjusted from 6px to 1vw */
+    outline: none; /* Prevent outline on focus */
+    margin-left: 5vw;
+}
+
+.nav-search:active,
+.nav-search:focus {
+    border: 2px rgb(2, 152, 211) solid; /* Blue border when active or focused */
+}
+
+.nav-search:hover {
+    border: 2px rgb(2, 152, 211) solid; /* Blue border on hover */
+}
+
+/* Placeholder Styles */
+/* Search Container Styles */
+.nav-search {
+    width: 40vw; /* Adjusted from 620px to 40vw */
+    display: flex;
+    justify-content: space-evenly;
+    border: none; /* No border by default */
+    height: 3vw; /* Adjusted from 40px to 3vw */
+    border-radius: 1vw; /* Adjusted from 6px to 1vw */
+    outline: none; /* Prevent outline on focus */
+}
+
+.nav-search:active,
+.nav-search:focus {
+    border: 2px rgb(2, 152, 211) solid; /* Blue border when active or focused */
+}
+
+.nav-search:hover {
+    border: 2px rgb(2, 152, 211) solid; /* Blue border on hover */
+}
+
+/* Placeholder Styles */
+/* Placeholder Styles */
+.placeholder {
+    color: #0f1111;
+    width: 100%;
+    border: none; /* No border for placeholder */
+    outline: none; /* Remove focus outline */
+    font-size: 1vw; /* Responsive font size */
+    padding: 10px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 0.5vw;
+    height: 5vw; /* Responsive height */
+    width: 7vw; /* Responsive width */
+    font-size: 2vh; /* Responsive font size */
+    color: #0f1111;
+    background-color: #056fcc;
+    padding-bottom: 1.6vw; /* Remove padding to center the SVG */
+}
+
+/* SVG Styles */
+.search svg {
+    width: 50%; /* Scale SVG to fit within the container */
+    height: 50%; /* Scale SVG to fit within the container */
+    fill: currentColor; /* Ensure SVG uses the text color */
+    display: block; /* Ensure no extra space around the SVG */
+}
+
+
+/* Button box styles */
+/* Button box styles */
+.button-box {
+    height: 4vw; /* Responsive */
+    width: 26vw; /* Responsive */
+    border-radius: 10px; /* Optional: Rounded corners */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-around; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+/* Button styles */
+.button-box button {
+    text-align: center; /* Center text horizontally */
+    background: transparent;
+    border: 1px solid rgb(4, 129, 224);
+    outline: none;
+    padding: 10px; /* Adjusted padding for better centering */
+    height: 4vw; /* Maintain responsive height */
+    font-weight: 700;
+    width: 5vw; /* Maintain responsive width */
+    border-radius: 15px;
+    overflow: hidden;
+    transform: scaleX(1);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1);
+    position: relative; /* Important for containing absolutely positioned elements */
+    display: flex; /* Use flexbox for button text */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+button:hover {
+    animation: animate-scaleX 0.6s cubic-bezier(0.4, 0, 0, 1);
+    color:white;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgb(4, 136, 224);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1),
+      border-radius 0.5s cubic-bezier(0.4, 0, 0, 1);
+    width: 100%;
+    height: 100%;
+    border-radius: 50% 50% 0 0;
+    transform: translateY(100%);
+}
+
+button:hover::after {
+    transform: translateY(0%);
+    border-radius: 0;
+}
+
+button span {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+    color: black;
+}
+
+button span:after {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1);
+    content: attr(data-text);
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 1;
+    transform: translate(-50%, 100%);
+    color: white;
+}
+
+button:hover span {
+    color: white; /* Change text color to white on hover */
+}
+
+button:hover span:after {
+    transform: translate(-50%, 0);
+}
+
+button:focus {
+    outline: none;
+}
+
+button a {
+    color: black;
+    text-decoration: none;
+    position: relative; /* Ensure it's correctly positioned within the button */
+    z-index: 2; /* Above the background */
+}
+
+button:hover a {
+    color: white; /* Change a tag color to white on hover */
+}
+
+@keyframes animate-scaleX {
+    0% {
+        transform: scaleX(1);
+    }
+    40% {
+        transform: scaleX(1.05);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.loader{height:100%;
+    width:100%;
+    background-color: #000;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    z-index: 999;
+    transition: all ease 1s;}       
+    
+    
+    .loader h1{color: transparent;
+        background: linear-gradient(to right,rgb(0, 255, 153),rgb(0, 229, 255));
+    font-size: 4vw;
+    -webkit-background-clip: text;
+    position: absolute
+    ;
+    opacity: 0;
+    animation-name: load;
+    animation-duration:1s ;
+    animation-delay:1s ;
+    animation-timing-function: linear;}
+    .loader h1:nth-child(2){animation-delay: 2s;}
+    .loader h1:nth-child(3){animation-delay: 3s;}
+    @keyframes load {0%{opacity:0}
+    10%{opacity:1}
+    90%{opacity: 1;}
+    100%{opacity: 0;}
+    
+            }
