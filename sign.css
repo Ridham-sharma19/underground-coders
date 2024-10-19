@@ -14,8 +14,8 @@ html, body {
 }
 
 .message {
-    font-size: 4vw;
-    margin-bottom: 3vw;
+    font-size: 1vw;
+    margin-bottom: 1vw;
 }
 
 .container {
@@ -317,24 +317,3 @@ input[type='checkbox'] + label {
     }
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 80vw; 
-        height: auto; 
-    }
-    .button-box {
-        width: 80vw; 
-    }
-    h1 {
-        font-size: 5vw; 
-    }
-}
-
-@media (max-width: 480px) {
-    .message {
-        font-size: 6vw; 
-    }
-    .button-box button {
-        width: 100%; 
-    }
-}
