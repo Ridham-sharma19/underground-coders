@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Arial;
+    font-style: normal;
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
+
+body, html {
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    background: rgb(59,111,219);
+    background: linear-gradient(5deg, rgba(59,111,219,1) 19%, rgba(152,152,151,1) 58%);
+  
+}
+
+
+.navbar {
+    width: 100%;
+    height: 8vw; 
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(15.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.7vw;
+}
+
+
+.navlogo {
+    width: 7.5vw; 
+    height: 7.5vw; 
+}
+
+.navlogo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.logo-heading{position:relative;
+    top:0.5vw;
+    left:-17vw;
+    color:#056fcc;
+    font-size: 1.3vw;
+   
+}
+
+.button-box {
+    height: 4vw; 
+    width: 26vw; 
+    border-radius: 10px; 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+
+.button-box button {
+    text-align: center;
+    background: transparent;
+    border: 1px solid rgb(4, 129, 224);
+    outline: none;
+    padding: 10px; 
+    height: 3vw;
+    font-weight: 700;
+    width: 5.2vw; 
+    border-radius: 25px;
+    overflow: hidden;
+    transform: scaleX(1);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1);
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.button-box button:hover {
+    animation: animate-scaleX 0.6s cubic-bezier(0.4, 0, 0, 1);
+    color: white;
+}
+
+.button-box button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgb(4, 136, 224);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1),
+      border-radius 0.5s cubic-bezier(0.4, 0, 0, 1);
+    width: 100%;
+    height: 100%;
+    border-radius: 50% 50% 0 0;
+    transform: translateY(100%);
+}
+
+.button-box button:hover::after {
+    transform: translateY(0%);
+    border-radius: 0;
+}
+
+.button-box button span {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+    color: black;
+}
+
+.button-box button span:after {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1);
+    content: attr(data-text);
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 1;
+    transform: translate(-50%, 100%);
+    color: white;
+}
+
+.button-box button:hover span {
+    color: white; 
+}
+
+.button-box button:hover span:after {
+    transform: translate(-50%, 0);
+}
+
+.button-box button:focus {
+    outline: none;
+}
+
+.button-box button a {
+    color: black;
+    text-decoration: none;
+    position: relative; 
+    z-index: 2;
+}
+
+.button-box button:hover a {
+    color: white;
+}
+
+@keyframes animate-scaleX {
+    0% {
+        transform: scaleX(1);
+    }
+    40% {
+        transform: scaleX(1.05);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+.container {
+    width: 50%;
+    margin-bottom: 5vw;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="tel"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button[type="submit"] {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popup-content {
+    position: relative;
+    background-color: white;
+    margin: 100px auto;
+    padding: 20px;
+    width: 40%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.popup-content p {
+    font-size: 18px;
+    color: #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+
+body {
+   
+    background-size: cover;
+    background: rgb(59,111,219);
+background: linear-gradient(5deg, rgba(59,111,219,1) 19%, rgba(152,152,151,1) 58%);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+    width: 4vw;
+    
+    text-align: center;
+
+}
+
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color:black;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    cursor: pointer;
+    transition:0.3s;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: rgba(237, 234, 234, 0.8); 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(231, 224, 224, 0.3);
+    color: white;
+    text-align: center;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: white;
+}.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: white;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
